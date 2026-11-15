@@ -16,4 +16,10 @@ return {
     keys = { { '-', '<cmd>Oil<cr>', desc = 'browse parent directory' } },
     opts = { view_options = { show_hidden = true } },
   },
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    keys = { { '<leader>e', '<cmd>NvimTreeToggle<cr>', desc = 'file tree' } },
+    opts = {},
+  },
 }
