@@ -8,6 +8,7 @@ return {
       { '<leader>fb', '<cmd>FzfLua buffers<cr>', desc = 'buffers' },
       { '<leader>fr', '<cmd>FzfLua oldfiles<cr>', desc = 'recent files' },
       { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'help tags' },
+      { '<leader>/', '<cmd>FzfLua blines<cr>', desc = 'search buffer' },
     },
     opts = {},
   },
