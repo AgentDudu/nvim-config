@@ -5,6 +5,15 @@ return {
     'neovim/nvim-lspconfig',
     branch = 'master',
     config = function()
+      vim.diagnostic.config {
+        virtual_text = false, -- no inline messages; E/W signs only, details in the quickfix buffer
+        signs = { text = {
+          [vim.diagnostic.severity.ERROR] = 'E',
+          [vim.diagnostic.severity.WARN] = 'W',
+          [vim.diagnostic.severity.INFO] = 'I',
+          [vim.diagnostic.severity.HINT] = 'H',
+        } },
+      }
       local mason_bin = vim.fn.stdpath('data') .. '/mason/bin'
       if vim.fn.isdirectory(mason_bin) == 1 then
         vim.env.PATH = mason_bin .. ';' .. vim.env.PATH
